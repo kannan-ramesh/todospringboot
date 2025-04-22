@@ -1,0 +1,69 @@
+This is a simple To-Do list web application developed using Spring Boot, Thymeleaf, and Session Storage (no database). It allows users to add, delete, and clear tasks during their active session.
+
+🚀 Features
+Add tasks to a to-do list
+
+Delete individual tasks
+
+Clear all tasks at once
+
+Session-based storage (tasks will reset when session ends)
+
+⚙️ Tech Stack
+Java 17
+
+Spring Boot 3.4.4
+
+Spring MVC
+
+Thymeleaf (for frontend)
+
+Maven
+
+WAR Packaging (deployable on external Tomcat)
+
+🗂️ Project Structure
+bash
+Copy
+Edit
+src/
+├── main/
+│   ├── java/com/kannanrameshrk/
+│   │   ├── Todo1Application.java          # Main class
+│   │   └── TodoController.java            # Controller to handle requests
+│   └── resources/
+│       ├── templates/todo.html            # Thymeleaf template
+│       └── application.properties         # App config (currently empty)
+└── pom.xml                                # Maven configuration
+🛠️ How to Run
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/kannan-ramesh/todospringboot.git
+cd todospringboot/todo1
+2. Build the WAR
+bash
+Copy
+Edit
+mvn clean package
+3. Deploy on Tomcat
+Copy the generated target/todo1.war file to your Apache Tomcat webapps/ folder.
+
+Start Tomcat and visit:
+
+bash
+Copy
+Edit
+http://localhost:8080/todo1/todo
+📋 Sample Usage
+🟢 Add Task: Type in the input box and click "add".
+
+🗑️ Delete Task: Click the "delete" button next to a task.
+
+❌ Delete All: Click "Delete All" to remove every task from the list.
+
+📌 Notes
+Tasks are stored in the HTTP session, not in a database.
+
+Session ends = tasks disappear.
